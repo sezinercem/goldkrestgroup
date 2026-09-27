@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
-import heroPhoto from "@/public/images/garden/raised-sleeper-bed.jpg";
+import heroPhoto from "@/public/images/garden/planted-border-patio.jpg";
 import logoFull from "@/public/logo-full.png";
 import { services, site } from "@/lib/site";
 
@@ -49,7 +49,7 @@ export default function Home() {
             <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-gold-light shadow-xl shadow-forest/10 lg:aspect-4/5">
               <Image
                 src={heroPhoto}
-                alt="Tidied raised sleeper bed with shaped laurel trees"
+                alt="Planted border with cypress trees beside a striped lawn and patio"
                 placeholder="blur"
                 fill
                 priority
