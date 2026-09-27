@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { DM_Serif_Display, Open_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -16,18 +16,25 @@ const heading = DM_Serif_Display({
   weight: "400",
 });
 
+// Matches the wordmark in the Goldkrest Group logo.
+const logo = Open_Sans({
+  variable: "--font-wordmark",
+  subsets: ["latin"],
+  weight: "700",
+});
+
 export const metadata: Metadata = {
   title: {
-    default: "Goldkrest Group | Brickwork, Landscaping & Pressure Washing",
+    default: "Goldkrest Group | Brickwork, Stone Restoration & Landscaping in Essex",
     template: "%s | Goldkrest Group",
   },
   description:
-    "Goldkrest Group provides professional brickwork, landscaping, garden maintenance and pressure washing services.",
+    "15 years of experience in heritage brickwork, stone restoration and lime pointing, plus landscaping, garden maintenance and pressure washing across Essex.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-GB" className={`${body.variable} ${heading.variable} h-full antialiased`}>
+    <html lang="en-GB" className={`${body.variable} ${heading.variable} ${logo.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
         <Header />
         <main className="flex-1">{children}</main>

@@ -19,8 +19,8 @@ export default function Header() {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
-    <header className="sticky top-0 z-40 border-b border-forest/10 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 bg-forest shadow-md shadow-black/10">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo />
 
         <nav aria-label="Main" className="hidden lg:block">
@@ -36,12 +36,12 @@ export default function Header() {
                     className={
                       isContact
                         ? `ml-3 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${
-                            active ? "bg-gold text-forest" : "bg-forest text-white hover:bg-forest-light"
+                            active ? "bg-white text-forest" : "bg-gold text-forest hover:bg-white"
                           }`
                         : `relative px-3 py-2 text-sm font-medium transition-colors after:absolute after:inset-x-3 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-gold after:transition-transform ${
                             active
-                              ? "text-forest after:scale-x-100"
-                              : "text-forest/70 after:scale-x-0 hover:text-forest hover:after:scale-x-100"
+                              ? "text-gold after:scale-x-100"
+                              : "text-white/80 after:scale-x-0 hover:text-white hover:after:scale-x-100"
                           }`
                     }
                   >
@@ -55,7 +55,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-forest hover:bg-gold-light lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-gold hover:bg-white/10 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -72,7 +72,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-forest/10 bg-white lg:hidden">
+        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-white/10 bg-forest lg:hidden">
           <ul className="mx-auto max-w-6xl px-4 py-3 sm:px-6">
             {navLinks.map((link) => {
               const active = isActive(link.href);
@@ -83,8 +83,8 @@ export default function Header() {
                     aria-current={active ? "page" : undefined}
                     className={`block rounded-md border-l-4 px-4 py-3 text-base font-medium ${
                       active
-                        ? "border-gold bg-gold-light text-forest"
-                        : "border-transparent text-forest/80 hover:bg-gold-light/60"
+                        ? "border-gold bg-white/10 text-gold"
+                        : "border-transparent text-white/85 hover:bg-white/5"
                     }`}
                   >
                     {link.label}

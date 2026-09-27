@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Goldkrest Group for a free quote on brickwork, landscaping or pressure washing.",
+  description: "Get in touch with Goldkrest Group about brickwork, stone restoration, landscaping or pressure washing in Essex.",
 };
 
 const details = [
@@ -38,8 +38,8 @@ export default function ContactPage() {
       <h1 className="mt-3 font-display text-4xl text-forest sm:text-5xl">Let&apos;s talk about your project</h1>
       <div className="mt-4 h-1 w-16 rounded-full bg-gold" aria-hidden="true" />
       <p className="mt-5 max-w-2xl text-lg leading-relaxed text-neutral-600">
-        Send us a message using the form, or contact us directly by email, phone or WhatsApp. We&apos;ll get back to
-        you as soon as we can.
+        Send us a message using the form, or contact us directly by email, phone or WhatsApp. We cover Essex and
+        will get back to you as soon as we can.
       </p>
 
       <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.4fr]">

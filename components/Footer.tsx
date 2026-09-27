@@ -7,9 +7,10 @@ export default function Footer() {
     <footer className="bg-forest text-white/80">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
-          <Logo light />
+          <Logo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
-            Brickwork, landscaping, garden maintenance and pressure washing.
+            Heritage brickwork, stone restoration and lime pointing, plus landscaping, garden maintenance and
+            pressure washing across Essex.
           </p>
         </div>
 

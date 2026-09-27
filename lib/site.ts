@@ -4,6 +4,7 @@ export const site = {
   phoneDisplay: "07394 633885",
   phoneHref: "tel:+447394633885",
   whatsappHref: "https://wa.me/447394633885",
+  area: "Essex",
 };
 
 export const navLinks = [
@@ -37,39 +38,39 @@ export const services: Service[] = [
   {
     slug: "brickwork",
     href: "/brickwork",
-    title: "Brickwork",
-    eyebrow: "Build & Repair",
+    title: "Brickwork & Stone Restoration",
+    eyebrow: "Our Specialism",
     summary:
-      "Garden walls, extensions, repointing and repairs — solid, tidy brickwork built to last.",
-    heroImage: { src: placeholder("brick-hero", 1600, 1000), alt: "Brickwork project" },
+      "Heritage brickwork, stone restoration and lime pointing, backed by 15 years of experience on landmark buildings.",
+    heroImage: { src: placeholder("brick-hero", 1600, 1000), alt: "Brickwork and stone restoration" },
     intro: [
-      "Good brickwork is the backbone of any property. Whether you need a new garden wall, a small extension or tired mortar brought back to life, we take care to match materials, keep lines straight and leave the site clean.",
-      "Every job starts with a clear quote and an honest conversation about what your project needs.",
+      "Brickwork is where Goldkrest Group began. Our team brings 15 years of hands-on experience, including restoring delicate stone and heritage brickwork on sites such as St Paul's Cathedral and the Houses of Parliament.",
+      "We bring that same care to homes and properties across Essex. From a period façade that needs sympathetic repair to a new garden wall, every job gets careful attention and pride in detail, finished to a golden standard.",
     ],
     offerings: [
       {
-        title: "Walls & boundaries",
-        text: "Garden walls, retaining walls, piers and boundary walls built to suit your property.",
+        title: "Heritage brickwork",
+        text: "Sympathetic repair and rebuilding of older and period brickwork, matching bricks, bond and finish.",
       },
       {
-        title: "Extensions & new builds",
-        text: "Brick and blockwork for extensions, outbuildings and structural projects.",
+        title: "Stone restoration",
+        text: "Careful cleaning, repair and restoration of delicate and decorative stonework.",
       },
       {
-        title: "Repointing",
-        text: "Raking out and repointing worn or crumbling mortar to protect and refresh your brickwork.",
+        title: "Lime pointing",
+        text: "Traditional lime mortar pointing that lets older walls breathe and protects them for years to come.",
       },
       {
-        title: "Repairs & alterations",
-        text: "Replacing damaged bricks, rebuilding sections and making alterations that blend in.",
+        title: "New brickwork & repairs",
+        text: "Garden walls, boundary walls, piers and general repairs, built neatly and built to last.",
       },
     ],
     gallery: [
-      { src: placeholder("brick-1"), alt: "Brick wall" },
-      { src: placeholder("brick-2"), alt: "Repointed brickwork" },
-      { src: placeholder("brick-3"), alt: "Garden wall" },
-      { src: placeholder("brick-4"), alt: "Brick extension" },
-      { src: placeholder("brick-5"), alt: "Brick pillars" },
+      { src: placeholder("brick-1"), alt: "Heritage brickwork" },
+      { src: placeholder("brick-2"), alt: "Lime pointing" },
+      { src: placeholder("brick-3"), alt: "Stone restoration" },
+      { src: placeholder("brick-4"), alt: "Restored brick façade" },
+      { src: placeholder("brick-5"), alt: "Brick garden wall" },
       { src: placeholder("brick-6"), alt: "Brickwork detail" },
     ],
   },
@@ -82,7 +83,7 @@ export const services: Service[] = [
       "From complete garden transformations to regular upkeep — outdoor spaces that look great all year.",
     heroImage: { src: placeholder("garden-hero", 1600, 1000), alt: "Landscaped garden" },
     intro: [
-      "Your garden should be a space you enjoy, not a chore. We design and build new outdoor spaces and keep existing gardens neat, healthy and under control.",
+      "Your garden should be a space you enjoy, not a chore. Across Essex, we create new outdoor spaces and keep existing gardens neat, healthy and under control.",
       "Choose a one-off project or regular maintenance visits — whatever suits your garden and your schedule.",
     ],
     offerings: [
@@ -121,7 +122,7 @@ export const services: Service[] = [
       "Driveways, patios, decking and more — deep cleaned to remove dirt, moss and staining.",
     heroImage: { src: placeholder("wash-hero", 1600, 1000), alt: "Pressure washing a patio" },
     intro: [
-      "Years of dirt, moss, algae and weather can make hard surfaces look tired and slippery. Professional pressure washing brings them back to life and makes them safer underfoot.",
+      "Years of dirt, moss, algae and weather can make hard surfaces look tired and slippery. Professional pressure washing brings them back to life and makes them safer underfoot, for homes and businesses across Essex.",
       "We adjust pressure and technique to suit each surface, so your paving, decking and walls get a deep clean without damage.",
     ],
     offerings: [

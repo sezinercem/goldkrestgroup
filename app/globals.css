@@ -9,6 +9,7 @@
   --color-whatsapp: #25d366;
   --font-sans: var(--font-body);
   --font-display: var(--font-heading);
+  --font-logo: var(--font-wordmark);
 }
 
 html {

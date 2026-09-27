@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export default function CtaBanner({
   title = "Ready to get started?",
-  text = "Tell us about your project and we'll get back to you with a free, no-obligation quote.",
+  text = "Tell us about your project and we'll get back to you to talk it through.",
 }: {
   title?: string;
   text?: string;
