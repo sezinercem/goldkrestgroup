@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gold: #bdb04c;
+  --color-gold-light: #f6f3e1;
+  --color-gold-dark: #8f8433;
+  --color-forest: #303a1c;
+  --color-forest-light: #4a5830;
+  --color-whatsapp: #25d366;
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #2b2f24;
+}

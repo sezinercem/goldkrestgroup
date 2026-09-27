@@ -1,0 +1,57 @@
+import Link from "next/link";
+import { navLinks, site } from "@/lib/site";
+import Logo from "./Logo";
+
+export default function Footer() {
+  return (
+    <footer className="bg-forest text-white/80">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3 lg:px-8">
+        <div>
+          <Logo light />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed">
+            Brickwork, landscaping, garden maintenance and pressure washing.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-gold">Pages</h2>
+          <ul className="mt-4 space-y-2 text-sm">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-gold">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-gold">Contact</h2>
+          <ul className="mt-4 space-y-2 text-sm">
+            <li>
+              <a href={`mailto:${site.email}`} className="hover:text-gold">
+                {site.email}
+              </a>
+            </li>
+            <li>
+              <a href={site.phoneHref} className="hover:text-gold">
+                {site.phoneDisplay}
+              </a>
+            </li>
+            <li>
+              <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer" className="hover:text-gold">
+                Message us on WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-white/10">
+        <p className="mx-auto max-w-6xl py-5 pr-20 pl-4 text-xs text-white/60 sm:px-6 lg:px-8">
+          © {new Date().getFullYear()} {site.name}. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+}
