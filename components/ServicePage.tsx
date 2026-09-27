@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Service } from "@/lib/site";
+import BeforeAfter from "./BeforeAfter";
 import CtaBanner from "./CtaBanner";
 import Gallery from "./Gallery";
 
@@ -51,9 +52,23 @@ export default function ServicePage({ service }: { service: Service }) {
         </div>
       </section>
 
+      {service.beforeAfter && service.beforeAfter.length > 0 && (
+        <section className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">Results</p>
+          <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Before &amp; after</h2>
+          <p className="mt-3 text-neutral-600">The same jobs, photographed before we started and once we&apos;d finished.</p>
+          <div className="mt-10">
+            <BeforeAfter pairs={service.beforeAfter} />
+          </div>
+        </section>
+      )}
+
       <section className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 lg:px-8">
-        <h2 className="font-display text-3xl text-forest sm:text-4xl">Our work</h2>
-        <p className="mt-3 text-neutral-600">A selection of recent {service.title.toLowerCase()} projects.</p>
+        <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">Our work</p>
+        <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Gallery</h2>
+        <p className="mt-3 text-neutral-600">
+          A selection of recent {service.title.toLowerCase()} work. Tap any photo to see it in full.
+        </p>
         <div className="mt-10">
           <Gallery images={service.gallery} />
         </div>

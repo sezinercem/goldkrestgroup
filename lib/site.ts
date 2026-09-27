@@ -39,6 +39,14 @@ export type GalleryImage = {
   position?: string;
 };
 
+// Only for genuine pairs: both photos must show the same job.
+export type BeforeAfterPair = {
+  title: string;
+  text: string;
+  before: GalleryImage;
+  after: GalleryImage;
+};
+
 export type Service = {
   slug: string;
   href: string;
@@ -48,6 +56,7 @@ export type Service = {
   heroImage: GalleryImage;
   intro: string[];
   offerings: { title: string; text: string }[];
+  beforeAfter?: BeforeAfterPair[];
   gallery: GalleryImage[];
 };
 
@@ -132,6 +141,20 @@ export const services: Service[] = [
         text: "Regular or one-off visits for mowing, edging, weeding, strimming and general tidying.",
       },
     ],
+    beforeAfter: [
+      {
+        title: "Raised sleeper bed tidy-up",
+        text: "Overgrown laurels cut back and shaped into standards, with the bed weeded and cleared.",
+        before: { src: gardenRaisedBedBefore, alt: "Overgrown laurels spilling out of a raised sleeper bed" },
+        after: { src: gardenRaisedBed, alt: "Raised sleeper bed tidied, with laurels shaped into standards" },
+      },
+      {
+        title: "Laurel hedge cut back",
+        text: "A dense, overgrown laurel hedge trimmed back into a neat, flat-topped shape.",
+        before: { src: gardenHedgeDriveway, alt: "Dense, overgrown laurel hedge beside a gravel driveway" },
+        after: { src: gardenHedgeTrimmed, alt: "The same laurel hedge cut back to a neat, flat-topped shape" },
+      },
+    ],
     gallery: [
       { src: gardenBorderPatio, alt: "Planted border with cypress trees beside a striped lawn and patio" },
       { src: gardenBorderPhotinia, alt: "New border planting with standard photinia trees and cypresses" },
@@ -143,10 +166,6 @@ export const services: Service[] = [
       { src: gardenStripedLawnBack, alt: "Striped back garden lawn" },
       { src: gardenTurfLaying, alt: "New turf being laid over a levelled soil base" },
       { src: gardenTurfHalfLaid, alt: "Large garden part-way through re-turfing" },
-      { src: gardenRaisedBedBefore, alt: "Before: overgrown laurels in a raised sleeper bed" },
-      { src: gardenRaisedBed, alt: "After: raised sleeper bed tidied with laurels shaped into standards" },
-      { src: gardenHedgeTrimmed, alt: "Laurel hedge cut back to a neat, flat-topped shape" },
-      { src: gardenHedgeDriveway, alt: "Dense laurel hedge beside a gravel driveway" },
       { src: gardenVergeStrimming, alt: "Overgrown verge being strimmed back" },
     ],
   },

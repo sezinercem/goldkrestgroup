@@ -67,6 +67,10 @@ Real photos live in `public/images/<service>/` (e.g. `public/images/garden/`). T
 1. Save it there (JPEG, around 1600px on the long side is plenty).
 2. Import it at the top of `lib/site.ts` and add it to that service's `gallery` list with a short `alt` description.
 
-Galleries show photos as uniform portrait tiles; clicking one opens the full, uncropped photo.
+Galleries show photos as uniform square tiles; clicking one opens the full, uncropped photo.
+
+**Before & after:** when you have a genuine pair (both photos of the same job), add it to that service's
+`beforeAfter` list in `lib/site.ts` instead of the gallery. Pairs appear in their own labelled "Before & after"
+section above the gallery; the section is hidden on pages with no pairs.
 Any gallery or hero image still using `placeholder(...)` comes from picsum.photos. Once none remain, you can delete
 the `images.remotePatterns` block in `next.config.ts`.
