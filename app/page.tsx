@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
+import heroPhoto from "@/public/images/garden/raised-sleeper-bed.jpg";
 import logoFull from "@/public/logo-full.png";
 import { services, site } from "@/lib/site";
 
@@ -47,8 +48,9 @@ export default function Home() {
             <div className="absolute -top-4 -right-4 hidden h-full w-full rounded-3xl bg-gold/30 sm:block" aria-hidden="true" />
             <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-gold-light shadow-xl shadow-forest/10 lg:aspect-4/5">
               <Image
-                src="https://picsum.photos/seed/goldkrest-home-hero/1200/1400"
-                alt="A finished Goldkrest Group project"
+                src={heroPhoto}
+                alt="Tidied raised sleeper bed with shaped laurel trees"
+                placeholder="blur"
                 fill
                 priority
                 sizes="(min-width: 1024px) 45vw, 100vw"
@@ -99,6 +101,7 @@ export default function Home() {
                     <Image
                       src={service.heroImage.src}
                       alt={service.heroImage.alt}
+                      style={{ objectPosition: service.heroImage.position }}
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"

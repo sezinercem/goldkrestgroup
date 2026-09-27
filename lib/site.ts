@@ -1,3 +1,9 @@
+import type { StaticImageData } from "next/image";
+import gardenHedgeDriveway from "@/public/images/garden/laurel-hedge-driveway.jpg";
+import gardenHedgeFrontGarden from "@/public/images/garden/laurel-hedge-front-garden.jpg";
+import gardenHedgeTrimmed from "@/public/images/garden/laurel-hedge-trimmed.jpg";
+import gardenRaisedBed from "@/public/images/garden/raised-sleeper-bed.jpg";
+
 export const site = {
   name: "Goldkrest Group",
   email: "info@goldkrest.group",
@@ -15,7 +21,12 @@ export const navLinks = [
   { href: "/contact", label: "Contact Us" },
 ];
 
-export type GalleryImage = { src: string; alt: string };
+export type GalleryImage = {
+  src: StaticImageData;
+  alt: string;
+  // CSS object-position used where the photo is cropped (e.g. hero images).
+  position?: string;
+};
 
 export type Service = {
   slug: string;
@@ -29,10 +40,13 @@ export type Service = {
   gallery: GalleryImage[];
 };
 
-// Placeholder photos — swap each `src` for real project photos
-// (e.g. put files in /public/images and use "/images/your-photo.jpg").
-const placeholder = (seed: string, w = 1200, h = 900) =>
-  `https://picsum.photos/seed/goldkrest-${seed}/${w}/${h}`;
+// Real photos live in /public/images/<service>/ and are imported above.
+// Placeholder photos (picsum.photos) fill the gaps until real ones arrive.
+const placeholder = (seed: string, width = 1200, height = 900): StaticImageData => ({
+  src: `https://picsum.photos/seed/goldkrest-${seed}/${width}/${height}`,
+  width,
+  height,
+});
 
 export const services: Service[] = [
   {
@@ -81,7 +95,11 @@ export const services: Service[] = [
     eyebrow: "Garden",
     summary:
       "From complete garden transformations to regular upkeep — outdoor spaces that look great all year.",
-    heroImage: { src: placeholder("garden-hero", 1600, 1000), alt: "Landscaped garden" },
+    heroImage: {
+      src: gardenHedgeTrimmed,
+      alt: "Laurel hedge cut back to a neat, flat-topped shape",
+      position: "50% 55%",
+    },
     intro: [
       "Your garden should be a space you enjoy, not a chore. Across Essex, we create new outdoor spaces and keep existing gardens neat, healthy and under control.",
       "Choose a one-off project or regular maintenance visits — whatever suits your garden and your schedule.",
@@ -105,12 +123,10 @@ export const services: Service[] = [
       },
     ],
     gallery: [
-      { src: placeholder("garden-1"), alt: "Landscaped garden" },
-      { src: placeholder("garden-2"), alt: "Freshly mown lawn" },
-      { src: placeholder("garden-3"), alt: "Trimmed hedges" },
-      { src: placeholder("garden-4"), alt: "Garden patio" },
-      { src: placeholder("garden-5"), alt: "Planted borders" },
-      { src: placeholder("garden-6"), alt: "Garden path" },
+      { src: gardenHedgeTrimmed, alt: "Laurel hedge cut back to a neat, flat-topped shape" },
+      { src: gardenRaisedBed, alt: "Tidied raised sleeper bed with shaped laurel trees" },
+      { src: gardenHedgeFrontGarden, alt: "Trimmed laurel hedge along a gravel front garden" },
+      { src: gardenHedgeDriveway, alt: "Dense laurel hedge beside a gravel driveway" },
     ],
   },
   {

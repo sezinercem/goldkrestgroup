@@ -28,6 +28,7 @@ export default function ServicePage({ service }: { service: Service }) {
           <Image
             src={service.heroImage.src}
             alt={service.heroImage.alt}
+            style={{ objectPosition: service.heroImage.position }}
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

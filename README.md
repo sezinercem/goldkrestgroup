@@ -60,8 +60,13 @@ If `RESEND_API_KEY` is missing, the form shows a friendly error and logs a messa
 - **Colours** (gold `#BDB04C`, dark green `#303A1C`): `app/globals.css`
 - **Fonts** (DM Serif Display + Plus Jakarta Sans, via `next/font/google`): `app/layout.tsx`
 
-### Replacing the placeholder photos
+### Adding photos
 
-Photos currently come from picsum.photos. To use real photos, put them in `public/images/` and change each
-`src` in `lib/site.ts` (and the homepage hero image in `app/page.tsx`) to a path like `/images/brick-wall-1.jpg`.
-Once no remote images remain, you can delete the `images.remotePatterns` block in `next.config.ts`.
+Real photos live in `public/images/<service>/` (e.g. `public/images/garden/`). To add one:
+
+1. Save it there (JPEG, around 1600px on the long side is plenty).
+2. Import it at the top of `lib/site.ts` and add it to that service's `gallery` list with a short `alt` description.
+
+Galleries show photos as uniform portrait tiles; clicking one opens the full, uncropped photo.
+Any gallery or hero image still using `placeholder(...)` comes from picsum.photos. Once none remain, you can delete
+the `images.remotePatterns` block in `next.config.ts`.
