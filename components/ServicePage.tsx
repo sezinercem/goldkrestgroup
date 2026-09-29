@@ -82,7 +82,7 @@ export default function ServicePage({ service }: { service: Service }) {
             className="inline-flex items-center gap-1.5 font-semibold text-forest underline decoration-gold decoration-2 underline-offset-4 hover:text-gold-dark"
           >
             <InstagramIcon className="h-4 w-4" />
-            Instagram @{site.instagramHandle}
+            Instagram
           </a>
         </p>
       </section>

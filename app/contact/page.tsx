@@ -31,7 +31,8 @@ const details = [
   },
   {
     label: "Instagram",
-    value: `@${site.instagramHandle}`,
+    value: "Instagram",
+    hideLabel: true,
     href: site.instagramHref,
     external: true,
     icon: (
@@ -70,7 +71,7 @@ export default function ContactPage() {
                   </svg>
                 </span>
                 <span>
-                  <span className="block text-sm font-medium text-neutral-500">{d.label}</span>
+                  {!d.hideLabel && <span className="block text-sm font-medium text-neutral-500">{d.label}</span>}
                   <span className="block text-lg font-semibold break-all text-forest">{d.value}</span>
                 </span>
               </a>

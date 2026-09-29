@@ -53,7 +53,8 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 hover:text-gold"
               >
-                <InstagramIcon className="h-4 w-4" />@{site.instagramHandle}
+                <InstagramIcon className="h-4 w-4" />
+                Instagram
               </a>
             </li>
           </ul>

@@ -42,7 +42,6 @@ export const site = {
   phoneDisplay: "07394 633885",
   phoneHref: "tel:+447394633885",
   whatsappHref: "https://wa.me/447394633885",
-  instagramHandle: "goldkrestgroup",
   instagramHref: "https://www.instagram.com/goldkrestgroup/",
   area: "Essex",
 };
