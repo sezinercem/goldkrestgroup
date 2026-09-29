@@ -5,15 +5,19 @@ import { useState } from "react";
 import type { GalleryImage } from "@/lib/site";
 import Lightbox from "./Lightbox";
 
+const INITIAL_COUNT = 12;
+
 // Uniform square tiles suit a mix of portrait and landscape photos;
 // clicking a tile opens the full, uncropped photo.
 export default function Gallery({ images }: { images: GalleryImage[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? images : images.slice(0, INITIAL_COUNT);
 
   return (
     <>
       <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-        {images.map((image, index) => (
+        {visible.map((image, index) => (
           <li key={image.src.src}>
             <button
               type="button"
@@ -33,6 +37,17 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
           </li>
         ))}
       </ul>
+      {images.length > visible.length && (
+        <div className="mt-8 text-center">
+          <button
+            type="button"
+            onClick={() => setShowAll(true)}
+            className="rounded-full border-2 border-gold px-7 py-3 font-semibold text-forest transition-colors hover:bg-gold-light"
+          >
+            Show all {images.length} photos
+          </button>
+        </div>
+      )}
       <Lightbox images={images} index={openIndex} onIndexChange={setOpenIndex} />
     </>
   );

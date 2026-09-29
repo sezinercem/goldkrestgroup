@@ -16,9 +16,12 @@ export default function BeforeAfter({ pairs }: { pairs: BeforeAfterPair[] }) {
 
   return (
     <>
-      <ul className="grid gap-8 lg:grid-cols-2">
+      <ul className="flex flex-wrap justify-center gap-8">
         {pairs.map((pair, pairIndex) => (
-          <li key={pair.title} className="rounded-3xl bg-white p-4 shadow-sm ring-1 ring-forest/10 sm:p-5">
+          <li
+            key={pair.title}
+            className="w-full rounded-3xl bg-white p-4 shadow-sm ring-1 ring-forest/10 sm:p-5 lg:w-[calc(50%-1rem)]"
+          >
             <div className="grid grid-cols-2 gap-3">
               {(["before", "after"] as const).map((side, sideIndex) => {
                 const photo = pair[side];

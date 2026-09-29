@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
-import heroPhoto from "@/public/images/garden/planted-border-patio.jpg";
+import heroPhoto from "@/public/images/garden/gravel-driveway-striped-lawns.jpg";
 import logoFull from "@/public/logo-full.png";
 import { services, site } from "@/lib/site";
 
@@ -49,7 +49,7 @@ export default function Home() {
             <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-gold-light shadow-xl shadow-forest/10 lg:aspect-4/5">
               <Image
                 src={heroPhoto}
-                alt="Planted border with cypress trees beside a striped lawn and patio"
+                alt="Gravel driveway with steel edging between freshly striped lawns"
                 placeholder="blur"
                 fill
                 priority
