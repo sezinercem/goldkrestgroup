@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navLinks, site } from "@/lib/site";
+import InstagramIcon from "./InstagramIcon";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -43,6 +44,16 @@ export default function Footer() {
             <li>
               <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer" className="hover:text-gold">
                 Message us on WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                href={site.instagramHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-gold"
+              >
+                <InstagramIcon className="h-4 w-4" />@{site.instagramHandle}
               </a>
             </li>
           </ul>

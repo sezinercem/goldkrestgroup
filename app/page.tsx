@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
-import heroPhoto from "@/public/images/garden/gravel-driveway-striped-lawns.jpg";
+import heroPhoto from "@/public/images/landscaping/gravel-driveway-striped-lawns.jpg";
 import logoFull from "@/public/logo-full.png";
 import { services, site } from "@/lib/site";
 

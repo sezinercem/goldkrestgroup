@@ -11,7 +11,7 @@ tooling. It's a standard Next.js app that deploys to Vercel with zero configurat
 | ------------------- | ----------------------------------- |
 | `/`                 | Homepage                            |
 | `/brickwork`        | Brickwork                           |
-| `/garden`           | Landscaping & Garden Maintenance    |
+| `/landscaping`      | Landscaping & Garden Maintenance (`/garden` redirects here) |
 | `/pressure-washing` | Pressure Washing                    |
 | `/contact`          | Contact Us (form + contact details) |
 | `/api/contact`      | API route that emails form submissions via Resend |
@@ -62,7 +62,7 @@ If `RESEND_API_KEY` is missing, the form shows a friendly error and logs a messa
 
 ### Adding photos
 
-Real photos live in `public/images/<service>/` (e.g. `public/images/garden/`). To add one:
+Real photos live in `public/images/<service>/` (`brickwork/`, `landscaping/`). To add one:
 
 1. Save it there (JPEG, around 1600px on the long side is plenty).
 2. Import it at the top of `lib/site.ts` and add it to that service's `gallery` list with a short `alt` description.

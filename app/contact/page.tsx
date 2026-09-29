@@ -29,6 +29,19 @@ const details = [
     external: true,
     icon: <path d="M3 21l1.7-5A9 9 0 1 1 8 19.3L3 21" />,
   },
+  {
+    label: "Instagram",
+    value: `@${site.instagramHandle}`,
+    href: site.instagramHref,
+    external: true,
+    icon: (
+      <>
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+      </>
+    ),
+  },
 ];
 
 export default function ContactPage() {
@@ -38,7 +51,7 @@ export default function ContactPage() {
       <h1 className="mt-3 font-display text-4xl text-forest sm:text-5xl">Let&apos;s talk about your project</h1>
       <div className="mt-4 h-1 w-16 rounded-full bg-gold" aria-hidden="true" />
       <p className="mt-5 max-w-2xl text-lg leading-relaxed text-neutral-600">
-        Send us a message using the form, or contact us directly by email, phone or WhatsApp. We cover Essex and
+        Send us a message using the form, or contact us directly by email, phone or WhatsApp. You can also see our latest work on Instagram. We cover Essex and
         will get back to you as soon as we can.
       </p>
 

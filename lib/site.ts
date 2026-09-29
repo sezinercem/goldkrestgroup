@@ -1,40 +1,40 @@
 import type { StaticImageData } from "next/image";
-import gardenArtificialLawn from "@/public/images/garden/artificial-lawn-garden-room.jpg";
-import gardenBorderCurvedLawn from "@/public/images/garden/border-curved-lawn.jpg";
-import gardenBorderPhotinia from "@/public/images/garden/border-cypress-photinia.jpg";
-import gardenConcreteBase from "@/public/images/garden/concrete-base.jpg";
-import gardenFenceGateBuild from "@/public/images/garden/fence-gate-build.jpg";
-import gardenFenceGateFrame from "@/public/images/garden/fence-gate-frame.jpg";
-import gardenFrontPath from "@/public/images/garden/front-path-gravel-garden.jpg";
-import gardenDrivewayLawns from "@/public/images/garden/gravel-driveway-striped-lawns.jpg";
-import gardenIvyOvergrown from "@/public/images/garden/ivy-hedge-overgrown.jpg";
-import gardenHedgeBoxTrim from "@/public/images/garden/laurel-hedge-box-trim.jpg";
-import gardenHedgeDriveway from "@/public/images/garden/laurel-hedge-driveway.jpg";
-import gardenHedgeTrimmed from "@/public/images/garden/laurel-hedge-trimmed.jpg";
-import gardenHedgeTrimmedStreet from "@/public/images/garden/laurel-hedge-trimmed-street.jpg";
-import gardenLawnSleeperBed from "@/public/images/garden/lawn-curved-sleeper-bed.jpg";
-import gardenLawnTennisCourt from "@/public/images/garden/lawn-tennis-court.jpg";
-import gardenNewBuildDigOut from "@/public/images/garden/new-build-dig-out.jpg";
-import gardenNewBuildDigger from "@/public/images/garden/new-build-digger.jpg";
-import gardenNewBuildExcavation from "@/public/images/garden/new-build-excavation.jpg";
-import gardenNewBuildSleeperBed from "@/public/images/garden/new-build-sleeper-bed.jpg";
-import gardenOakSleeperEdging from "@/public/images/garden/oak-sleeper-edging.jpg";
-import gardenPatioAfter from "@/public/images/garden/patio-after.jpg";
-import gardenPatioBefore from "@/public/images/garden/patio-before.jpg";
-import gardenPatioSubBase from "@/public/images/garden/patio-sub-base.jpg";
-import gardenPavingReady from "@/public/images/garden/paving-ready-to-lay.jpg";
-import gardenBedBrickWalls from "@/public/images/garden/planted-bed-brick-walls.jpg";
-import gardenBedCorner from "@/public/images/garden/planted-bed-corner.jpg";
-import gardenBorderPatio from "@/public/images/garden/planted-border-patio.jpg";
-import gardenRaisedBedBefore from "@/public/images/garden/raised-bed-before.jpg";
-import gardenRaisedBed from "@/public/images/garden/raised-sleeper-bed.jpg";
-import gardenStripedLawnBack from "@/public/images/garden/striped-lawn-back-garden.jpg";
-import gardenStripedLawnFront from "@/public/images/garden/striped-lawn-front.jpg";
-import gardenStripedLawnSleeperBed from "@/public/images/garden/striped-lawn-sleeper-bed.jpg";
-import gardenTurfGroundPrep from "@/public/images/garden/turf-ground-prep.jpg";
-import gardenTurfHalfLaid from "@/public/images/garden/turf-half-laid.jpg";
-import gardenTurfLaying from "@/public/images/garden/turf-laying.jpg";
-import gardenVergeStrimming from "@/public/images/garden/verge-strimming.jpg";
+import landscapingArtificialLawn from "@/public/images/landscaping/artificial-lawn-garden-room.jpg";
+import landscapingBorderCurvedLawn from "@/public/images/landscaping/border-curved-lawn.jpg";
+import landscapingBorderPhotinia from "@/public/images/landscaping/border-cypress-photinia.jpg";
+import brickConcreteBase from "@/public/images/brickwork/concrete-base.jpg";
+import landscapingFenceGateBuild from "@/public/images/landscaping/fence-gate-build.jpg";
+import landscapingFenceGateFrame from "@/public/images/landscaping/fence-gate-frame.jpg";
+import landscapingFrontPath from "@/public/images/landscaping/front-path-gravel-garden.jpg";
+import landscapingDrivewayLawns from "@/public/images/landscaping/gravel-driveway-striped-lawns.jpg";
+import landscapingIvyOvergrown from "@/public/images/landscaping/ivy-hedge-overgrown.jpg";
+import landscapingHedgeBoxTrim from "@/public/images/landscaping/laurel-hedge-box-trim.jpg";
+import landscapingHedgeDriveway from "@/public/images/landscaping/laurel-hedge-driveway.jpg";
+import landscapingHedgeTrimmed from "@/public/images/landscaping/laurel-hedge-trimmed.jpg";
+import landscapingHedgeTrimmedStreet from "@/public/images/landscaping/laurel-hedge-trimmed-street.jpg";
+import landscapingLawnSleeperBed from "@/public/images/landscaping/lawn-curved-sleeper-bed.jpg";
+import landscapingLawnTennisCourt from "@/public/images/landscaping/lawn-tennis-court.jpg";
+import brickRetainingWallsGarden from "@/public/images/brickwork/new-build-dig-out.jpg";
+import landscapingNewBuildDigger from "@/public/images/landscaping/new-build-digger.jpg";
+import brickRetainingWallsGroundworks from "@/public/images/brickwork/new-build-excavation.jpg";
+import brickRetainingWallSleeperBed from "@/public/images/brickwork/new-build-sleeper-bed.jpg";
+import brickRetainingWallDetail from "@/public/images/brickwork/oak-sleeper-edging.jpg";
+import landscapingPatioAfter from "@/public/images/landscaping/patio-after.jpg";
+import landscapingPatioBefore from "@/public/images/landscaping/patio-before.jpg";
+import landscapingPatioSubBase from "@/public/images/landscaping/patio-sub-base.jpg";
+import landscapingPavingReady from "@/public/images/landscaping/paving-ready-to-lay.jpg";
+import brickPlanterWalls from "@/public/images/brickwork/planted-bed-brick-walls.jpg";
+import brickCurvedPlanter from "@/public/images/brickwork/planted-bed-corner.jpg";
+import landscapingBorderPatio from "@/public/images/landscaping/planted-border-patio.jpg";
+import landscapingRaisedBedBefore from "@/public/images/landscaping/raised-bed-before.jpg";
+import landscapingRaisedBed from "@/public/images/landscaping/raised-sleeper-bed.jpg";
+import landscapingStripedLawnBack from "@/public/images/landscaping/striped-lawn-back-garden.jpg";
+import landscapingStripedLawnFront from "@/public/images/landscaping/striped-lawn-front.jpg";
+import landscapingStripedLawnSleeperBed from "@/public/images/landscaping/striped-lawn-sleeper-bed.jpg";
+import landscapingTurfGroundPrep from "@/public/images/landscaping/turf-ground-prep.jpg";
+import landscapingTurfHalfLaid from "@/public/images/landscaping/turf-half-laid.jpg";
+import landscapingTurfLaying from "@/public/images/landscaping/turf-laying.jpg";
+import landscapingVergeStrimming from "@/public/images/landscaping/verge-strimming.jpg";
 
 export const site = {
   name: "Goldkrest Group",
@@ -42,13 +42,15 @@ export const site = {
   phoneDisplay: "07394 633885",
   phoneHref: "tel:+447394633885",
   whatsappHref: "https://wa.me/447394633885",
+  instagramHandle: "goldkrestgroup",
+  instagramHref: "https://www.instagram.com/goldkrestgroup/",
   area: "Essex",
 };
 
 export const navLinks = [
-  { href: "/", label: "Homepage" },
+  { href: "/", label: "Home" },
   { href: "/brickwork", label: "Brickwork" },
-  { href: "/garden", label: "Garden" },
+  { href: "/landscaping", label: "Landscaping" },
   { href: "/pressure-washing", label: "Pressure Washing" },
   { href: "/contact", label: "Contact Us" },
 ];
@@ -97,7 +99,7 @@ export const services: Service[] = [
     eyebrow: "Our Specialism",
     summary:
       "Heritage brickwork, stone restoration and lime pointing, backed by 15 years of experience on landmark buildings.",
-    heroImage: { src: placeholder("brick-hero", 1600, 1000), alt: "Brickwork and stone restoration" },
+    heroImage: { src: brickPlanterWalls, alt: "Brick planter walls with railings around a newly planted bed" },
     intro: [
       "Brickwork is where Goldkrest Group began. Our team brings 15 years of hands-on experience, including restoring delicate stone and heritage brickwork on sites such as St Paul's Cathedral and the Houses of Parliament.",
       "We bring that same care to homes and properties across Essex. From a period façade that needs sympathetic repair to a new garden wall, every job gets careful attention and pride in detail, finished to a golden standard.",
@@ -116,29 +118,30 @@ export const services: Service[] = [
         text: "Traditional lime mortar pointing that lets older walls breathe and protects them for years to come.",
       },
       {
-        title: "New brickwork & repairs",
-        text: "Garden walls, boundary walls, piers and general repairs, built neatly and built to last.",
+        title: "New brickwork & retaining walls",
+        text: "Retaining walls, raised planters, garden and boundary walls, piers and repairs, built neatly and built to last.",
       },
     ],
     gallery: [
-      { src: placeholder("brick-1"), alt: "Heritage brickwork" },
-      { src: placeholder("brick-2"), alt: "Lime pointing" },
-      { src: placeholder("brick-3"), alt: "Stone restoration" },
-      { src: placeholder("brick-4"), alt: "Restored brick façade" },
-      { src: placeholder("brick-5"), alt: "Brick garden wall" },
-      { src: placeholder("brick-6"), alt: "Brickwork detail" },
+      { src: brickPlanterWalls, alt: "Brick planter walls with railings around a newly planted bed" },
+      { src: brickCurvedPlanter, alt: "Curved brick planter wall around a corner bed" },
+      { src: brickRetainingWallsGroundworks, alt: "Stepped brick retaining walls with fencing above, during groundworks" },
+      { src: brickRetainingWallsGarden, alt: "Brick retaining walls around a new-build garden, ready for landscaping" },
+      { src: brickRetainingWallSleeperBed, alt: "Brick retaining wall with an oak sleeper bed along its base" },
+      { src: brickRetainingWallDetail, alt: "Close-up of a brick retaining wall with oak sleeper edging" },
+      { src: brickConcreteBase, alt: "New concrete base laid in a back garden" },
     ],
   },
   {
-    slug: "garden",
-    href: "/garden",
-    title: "Landscaping & Garden Maintenance",
-    eyebrow: "Garden",
+    slug: "landscaping",
+    href: "/landscaping",
+    title: "Landscaping",
+    eyebrow: "Gardens & Outdoor Spaces",
     summary:
       "New planting, turfing and hedge work, plus regular upkeep to keep outdoor spaces looking great all year.",
     heroImage: {
-      src: gardenBedBrickWalls,
-      alt: "Freshly planted bed set into a patio, with brick walls and railings",
+      src: landscapingBorderPatio,
+      alt: "Planted border with cypress trees beside a striped lawn and patio",
     },
     intro: [
       "Your garden should be a space you enjoy, not a chore. Across Essex, we create new outdoor spaces and keep existing gardens neat, healthy and under control.",
@@ -166,53 +169,46 @@ export const services: Service[] = [
       {
         title: "New patio",
         text: "Ground dug out beside the house, then a sub-base and new stone-effect patio laid around the heat pump.",
-        before: { src: gardenPatioBefore, alt: "Ground dug out beside a new-build house, ready for a patio" },
-        after: { src: gardenPatioAfter, alt: "The same area with a new stone-effect patio laid" },
+        before: { src: landscapingPatioBefore, alt: "Ground dug out beside a new-build house, ready for a patio" },
+        after: { src: landscapingPatioAfter, alt: "The same area with a new stone-effect patio laid" },
       },
       {
         title: "Raised sleeper bed tidy-up",
         text: "Overgrown laurels cut back and shaped into standards, with the bed weeded and cleared.",
-        before: { src: gardenRaisedBedBefore, alt: "Overgrown laurels spilling out of a raised sleeper bed" },
-        after: { src: gardenRaisedBed, alt: "Raised sleeper bed tidied, with laurels shaped into standards" },
+        before: { src: landscapingRaisedBedBefore, alt: "Overgrown laurels spilling out of a raised sleeper bed" },
+        after: { src: landscapingRaisedBed, alt: "Raised sleeper bed tidied, with laurels shaped into standards" },
       },
       {
         title: "Laurel hedge cut back",
         text: "A dense, overgrown laurel hedge trimmed back into a neat, flat-topped shape.",
-        before: { src: gardenHedgeDriveway, alt: "Dense, overgrown laurel hedge beside a gravel driveway" },
-        after: { src: gardenHedgeTrimmed, alt: "The same laurel hedge cut back to a neat, flat-topped shape" },
+        before: { src: landscapingHedgeDriveway, alt: "Dense, overgrown laurel hedge beside a gravel driveway" },
+        after: { src: landscapingHedgeTrimmed, alt: "The same laurel hedge cut back to a neat, flat-topped shape" },
       },
     ],
     gallery: [
-      { src: gardenDrivewayLawns, alt: "Gravel driveway with steel edging between freshly striped lawns" },
-      { src: gardenBorderPatio, alt: "Planted border with cypress trees beside a striped lawn and patio" },
-      { src: gardenBorderPhotinia, alt: "New border planting with standard photinia trees and cypresses" },
-      { src: gardenBorderCurvedLawn, alt: "Established border planting along a curved lawn and brick piers" },
-      { src: gardenArtificialLawn, alt: "Striped artificial lawn with decking and a garden room" },
-      { src: gardenBedBrickWalls, alt: "Freshly planted bed set into a patio, with brick walls and railings" },
-      { src: gardenBedCorner, alt: "Corner bed planted with shrubs, grasses and euphorbia" },
-      { src: gardenLawnTennisCourt, alt: "Lawn and planted bed beside a tennis court" },
-      { src: gardenFrontPath, alt: "Front path and gravel garden with picket fencing" },
-      { src: gardenLawnSleeperBed, alt: "Lawn beside a curved timber-edged raised border" },
-      { src: gardenStripedLawnSleeperBed, alt: "Striped lawn alongside a raised timber border" },
-      { src: gardenStripedLawnFront, alt: "Freshly striped front lawn on a new-build development" },
-      { src: gardenStripedLawnBack, alt: "Striped back garden lawn" },
-      { src: gardenHedgeBoxTrim, alt: "Laurel hedge trimmed into a clean, box shape" },
-      { src: gardenHedgeTrimmedStreet, alt: "Freshly trimmed laurel hedge along a front garden" },
-      { src: gardenIvyOvergrown, alt: "Overgrown ivy along a yard wall, ready to be cut back" },
-      { src: gardenVergeStrimming, alt: "Overgrown verge being strimmed back" },
-      { src: gardenTurfGroundPrep, alt: "Large garden levelled and prepared for new turf" },
-      { src: gardenTurfLaying, alt: "New turf being laid over a levelled soil base" },
-      { src: gardenTurfHalfLaid, alt: "Large garden part-way through re-turfing" },
-      { src: gardenNewBuildDigOut, alt: "New-build garden dug out and levelled, ready for landscaping" },
-      { src: gardenNewBuildExcavation, alt: "Excavation under way on a new-build garden" },
-      { src: gardenNewBuildDigger, alt: "Mini digger clearing a new-build garden, with sleeper beds in place" },
-      { src: gardenNewBuildSleeperBed, alt: "Oak sleeper raised bed going in along a brick retaining wall" },
-      { src: gardenOakSleeperEdging, alt: "Oak sleeper edging set level along a brick retaining wall" },
-      { src: gardenPatioSubBase, alt: "Sub-base laid for a new patio and path" },
-      { src: gardenPavingReady, alt: "Paving slabs stacked on a prepared sub-base, ready to lay" },
-      { src: gardenFenceGateBuild, alt: "New fence and gate being built beside a gravel area" },
-      { src: gardenFenceGateFrame, alt: "Frame for a new fence and gate going up" },
-      { src: gardenConcreteBase, alt: "New concrete base laid in a back garden" },
+      { src: landscapingDrivewayLawns, alt: "Gravel driveway with steel edging between freshly striped lawns" },
+      { src: landscapingBorderPatio, alt: "Planted border with cypress trees beside a striped lawn and patio" },
+      { src: landscapingBorderPhotinia, alt: "New border planting with standard photinia trees and cypresses" },
+      { src: landscapingBorderCurvedLawn, alt: "Established border planting along a curved lawn and brick piers" },
+      { src: landscapingArtificialLawn, alt: "Striped artificial lawn with decking and a garden room" },
+      { src: landscapingLawnTennisCourt, alt: "Lawn and planted bed beside a tennis court" },
+      { src: landscapingFrontPath, alt: "Front path and gravel garden with picket fencing" },
+      { src: landscapingLawnSleeperBed, alt: "Lawn beside a curved timber-edged raised border" },
+      { src: landscapingStripedLawnSleeperBed, alt: "Striped lawn alongside a raised timber border" },
+      { src: landscapingStripedLawnFront, alt: "Freshly striped front lawn on a new-build development" },
+      { src: landscapingStripedLawnBack, alt: "Striped back garden lawn" },
+      { src: landscapingHedgeBoxTrim, alt: "Laurel hedge trimmed into a clean, box shape" },
+      { src: landscapingHedgeTrimmedStreet, alt: "Freshly trimmed laurel hedge along a front garden" },
+      { src: landscapingIvyOvergrown, alt: "Overgrown ivy along a yard wall, ready to be cut back" },
+      { src: landscapingVergeStrimming, alt: "Overgrown verge being strimmed back" },
+      { src: landscapingTurfGroundPrep, alt: "Large garden levelled and prepared for new turf" },
+      { src: landscapingTurfLaying, alt: "New turf being laid over a levelled soil base" },
+      { src: landscapingTurfHalfLaid, alt: "Large garden part-way through re-turfing" },
+      { src: landscapingNewBuildDigger, alt: "Mini digger clearing a new-build garden, with sleeper beds in place" },
+      { src: landscapingPatioSubBase, alt: "Sub-base laid for a new patio and path" },
+      { src: landscapingPavingReady, alt: "Paving slabs stacked on a prepared sub-base, ready to lay" },
+      { src: landscapingFenceGateBuild, alt: "New fence and gate being built beside a gravel area" },
+      { src: landscapingFenceGateFrame, alt: "Frame for a new fence and gate going up" },
     ],
   },
   {
