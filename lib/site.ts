@@ -75,6 +75,8 @@ export type Service = {
   eyebrow: string;
   summary: string;
   heroImage: GalleryImage;
+  // Homepage service card photo, when it should differ from the hero.
+  cardImage?: GalleryImage;
   intro: string[];
   offerings: { title: string; text: string }[];
   beforeAfter?: BeforeAfterPair[];
@@ -90,6 +92,7 @@ export const services: Service[] = [
     summary:
       "Heritage brickwork, stone restoration and lime pointing, backed by 15 years of experience on landmark buildings.",
     heroImage: { src: brickPlanterWalls, alt: "Brick planter walls with railings around a newly planted bed" },
+    cardImage: { src: brickCurvedPlanter, alt: "Curved brick planter wall around a corner bed" },
     intro: [
       "Brickwork is where Goldkrest Group began. Our team brings 15 years of hands-on experience, including restoring delicate stone and heritage brickwork on sites such as St Paul's Cathedral and the Houses of Parliament.",
       "We bring that same care to homes and properties across Essex. From a period façade that needs sympathetic repair to a new garden wall, every job gets careful attention and pride in detail, finished to a golden standard.",

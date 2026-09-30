@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
-import heroPhoto from "@/public/images/landscaping/gravel-driveway-striped-lawns.jpg";
+import Gallery from "@/components/Gallery";
+import heroPhoto from "@/public/images/brickwork/planted-bed-brick-walls.jpg";
 import logoFull from "@/public/logo-full.png";
-import { services, site } from "@/lib/site";
+import { getService, services, site } from "@/lib/site";
+
+const brickwork = getService("brickwork");
 
 const reasons = [
   { title: "15 years' experience", text: "Hands-on experience across brickwork, stone and outdoor spaces." },
@@ -49,7 +52,7 @@ export default function Home() {
             <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-gold-light shadow-xl shadow-forest/10 lg:aspect-4/5">
               <Image
                 src={heroPhoto}
-                alt="Gravel driveway with steel edging between freshly striped lawns"
+                alt="Brick planter walls with railings around a newly planted bed"
                 placeholder="blur"
                 fill
                 priority
@@ -61,7 +64,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-6xl px-4 pt-4 pb-16 sm:px-6 md:pb-24 lg:px-8">
+      <section className="bg-gold-light/60 py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">Our specialism</p>
+              <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Brickwork &amp; stone restoration</h2>
+              <p className="mt-4 text-lg leading-relaxed text-neutral-600">
+                From heritage brickwork and lime pointing to new retaining walls and brick planters, brickwork is at the
+                heart of everything we do.
+              </p>
+            </div>
+            <Link
+              href={brickwork.href}
+              className="shrink-0 self-start rounded-full bg-forest px-7 py-3.5 font-semibold text-white transition-colors hover:bg-forest-light md:self-auto"
+            >
+              See our brickwork
+            </Link>
+          </div>
+          <div className="mt-10">
+            <Gallery images={brickwork.gallery.slice(0, 6)} />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           <div className="flex items-center justify-center rounded-3xl bg-forest p-10 sm:p-14">
             <Image src={logoFull} alt="Goldkrest Group logo" sizes="(min-width: 1024px) 320px, 60vw" className="h-auto w-full max-w-72" />
@@ -99,9 +126,9 @@ export default function Home() {
                 >
                   <div className="relative aspect-3/2 overflow-hidden bg-gold-light">
                     <Image
-                      src={service.heroImage.src}
-                      alt={service.heroImage.alt}
-                      style={{ objectPosition: service.heroImage.position }}
+                      src={(service.cardImage ?? service.heroImage).src}
+                      alt={(service.cardImage ?? service.heroImage).alt}
+                      style={{ objectPosition: (service.cardImage ?? service.heroImage).position }}
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
