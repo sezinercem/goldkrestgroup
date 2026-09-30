@@ -50,7 +50,6 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/brickwork", label: "Brickwork" },
   { href: "/landscaping", label: "Landscaping" },
-  { href: "/pressure-washing", label: "Pressure Washing" },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -81,14 +80,6 @@ export type Service = {
   beforeAfter?: BeforeAfterPair[];
   gallery: GalleryImage[];
 };
-
-// Real photos live in /public/images/<service>/ and are imported above.
-// Placeholder photos (picsum.photos) fill the gaps until real ones arrive.
-const placeholder = (seed: string, width = 1200, height = 900): StaticImageData => ({
-  src: `https://picsum.photos/seed/goldkrest-${seed}/${width}/${height}`,
-  width,
-  height,
-});
 
 export const services: Service[] = [
   {
@@ -208,45 +199,6 @@ export const services: Service[] = [
       { src: landscapingPavingReady, alt: "Paving slabs stacked on a prepared sub-base, ready to lay" },
       { src: landscapingFenceGateBuild, alt: "New fence and gate being built beside a gravel area" },
       { src: landscapingFenceGateFrame, alt: "Frame for a new fence and gate going up" },
-    ],
-  },
-  {
-    slug: "pressure-washing",
-    href: "/pressure-washing",
-    title: "Pressure Washing",
-    eyebrow: "Clean & Restore",
-    summary:
-      "Driveways, patios, decking and more — deep cleaned to remove dirt, moss and staining.",
-    heroImage: { src: placeholder("wash-hero", 1600, 1000), alt: "Pressure washing a patio" },
-    intro: [
-      "Years of dirt, moss, algae and weather can make hard surfaces look tired and slippery. Professional pressure washing brings them back to life and makes them safer underfoot, for homes and businesses across Essex.",
-      "We adjust pressure and technique to suit each surface, so your paving, decking and walls get a deep clean without damage.",
-    ],
-    offerings: [
-      {
-        title: "Driveways",
-        text: "Block paving, concrete and tarmac driveways cleaned of oil, dirt and weeds.",
-      },
-      {
-        title: "Patios & paths",
-        text: "Stone, slab and brick paving restored to its original colour.",
-      },
-      {
-        title: "Decking",
-        text: "Removing green algae and grime to make decking look better and less slippery.",
-      },
-      {
-        title: "Walls & fencing",
-        text: "Cleaning brick walls, render and fences to lift built-up dirt and staining.",
-      },
-    ],
-    gallery: [
-      { src: placeholder("wash-1"), alt: "Cleaned driveway" },
-      { src: placeholder("wash-2"), alt: "Patio after pressure washing" },
-      { src: placeholder("wash-3"), alt: "Decking cleaning" },
-      { src: placeholder("wash-4"), alt: "Block paving" },
-      { src: placeholder("wash-5"), alt: "Clean garden path" },
-      { src: placeholder("wash-6"), alt: "Wall cleaning" },
     ],
   },
 ];

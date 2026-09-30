@@ -25,8 +25,8 @@ export default function Home() {
               Heritage craftsmanship, <span className="text-gold">finished to a golden standard.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
-              Specialists in brickwork, stone restoration and lime pointing, with reliable landscaping, garden
-              maintenance and pressure washing to keep your home and garden looking their best.
+              Specialists in brickwork, stone restoration and lime pointing, with reliable landscaping and garden
+              maintenance to keep your home and garden looking their best.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -90,7 +90,7 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">What we do</p>
             <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Our services</h2>
           </div>
-          <ul className="mt-12 grid gap-6 md:grid-cols-3">
+          <ul className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
             {services.map((service) => (
               <li key={service.slug}>
                 <Link

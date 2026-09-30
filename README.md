@@ -1,6 +1,6 @@
 # Goldkrest Group website
 
-Business website for Goldkrest Group: brickwork, landscaping & garden maintenance, and pressure washing.
+Business website for Goldkrest Group: brickwork and stone restoration, plus landscaping & garden maintenance.
 
 Built with **Next.js (App Router)**, **TypeScript** and **Tailwind CSS**. There's no database and no platform-specific
 tooling. It's a standard Next.js app that deploys to Vercel with zero configuration.
@@ -12,7 +12,6 @@ tooling. It's a standard Next.js app that deploys to Vercel with zero configurat
 | `/`                 | Homepage                            |
 | `/brickwork`        | Brickwork                           |
 | `/landscaping`      | Landscaping & Garden Maintenance (`/garden` redirects here) |
-| `/pressure-washing` | Pressure Washing                    |
 | `/contact`          | Contact Us (form + contact details) |
 | `/api/contact`      | API route that emails form submissions via Resend |
 
@@ -72,5 +71,3 @@ Galleries show photos as uniform square tiles; clicking one opens the full, uncr
 **Before & after:** when you have a genuine pair (both photos of the same job), add it to that service's
 `beforeAfter` list in `lib/site.ts` instead of the gallery. Pairs appear in their own labelled "Before & after"
 section above the gallery; the section is hidden on pages with no pairs.
-Any gallery or hero image still using `placeholder(...)` comes from picsum.photos. Once none remain, you can delete
-the `images.remotePatterns` block in `next.config.ts`.

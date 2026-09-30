@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Goldkrest Group about brickwork, stone restoration, landscaping or pressure washing in Essex.",
+  description: "Get in touch with Goldkrest Group about brickwork, stone restoration or landscaping in Essex.",
 };
 
 const details = [

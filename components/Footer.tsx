@@ -10,8 +10,8 @@ export default function Footer() {
         <div>
           <Logo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
-            Heritage brickwork, stone restoration and lime pointing, plus landscaping, garden maintenance and
-            pressure washing across Essex.
+            Heritage brickwork, stone restoration and lime pointing, plus landscaping and garden maintenance
+            across Essex.
           </p>
         </div>
 

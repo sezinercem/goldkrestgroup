@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Goldkrest Group",
   },
   description:
-    "15 years of experience in heritage brickwork, stone restoration and lime pointing, plus landscaping, garden maintenance and pressure washing across Essex.",
+    "15 years of experience in heritage brickwork, stone restoration and lime pointing, plus landscaping and garden maintenance across Essex.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
