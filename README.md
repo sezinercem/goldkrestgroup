@@ -30,22 +30,42 @@ Other scripts: `npm run build`, `npm start`, `npm run lint`.
 
 ## Contact form email (Resend)
 
-The contact form posts to `app/api/contact/route.ts`, which sends the enquiry to **info@goldkrest.group**
-using [Resend](https://resend.com). The visitor's email is set as *Reply-To*, so you can reply directly.
+When someone submits the contact form, `app/api/contact/route.ts` emails the enquiry to
+**info@goldkrest.group** using [Resend](https://resend.com). The visitor's email is set as *Reply-To*, so
+pressing **Reply** in the inbox answers the customer directly. No code changes are needed, only the setup below.
 
-The only thing you need to set is **`RESEND_API_KEY`**:
+### Setup (about 15 minutes, done once)
 
-1. Create a free account at [resend.com](https://resend.com) and create an API key under **API Keys**.
-2. Add it as an environment variable:
-   - **Locally:** put `RESEND_API_KEY=re_...` in `.env.local`.
-   - **On Vercel:** Project → **Settings → Environment Variables** → add `RESEND_API_KEY`, then redeploy.
+1. **Check the inbox works.** Send a test email to info@goldkrest.group from a personal address and make sure it
+   arrives. The website can only deliver to a mailbox that exists.
+2. **Create a Resend account** at [resend.com](https://resend.com) (the free plan is plenty for a contact form).
+3. **Verify the domain.** In Resend go to **Domains → Add Domain**, enter `goldkrest.group`, and add the DNS records
+   it shows (a few TXT/MX records) wherever the domain's DNS is managed (the registrar, e.g. GoDaddy, Namecheap,
+   123 Reg, or Cloudflare). These records sit on the `send.` and `resend._domainkey` sub-names, so they **do not
+   affect the existing info@ inbox**. Wait until Resend shows the domain as **Verified** (often minutes, can take
+   a few hours).
+4. **Create an API key.** In Resend go to **API Keys → Create API Key**, choose **Sending access** for
+   `goldkrest.group`, and copy the key (it starts with `re_` and is only shown once).
+5. **Add the settings to Vercel.** In the Vercel project go to **Settings → Environment Variables** and add:
 
-> **Important:** until you verify a domain, Resend sends from its shared address `onboarding@resend.dev`,
-> which can **only deliver to the email address that owns the Resend account**. So either sign up to Resend
-> using **info@goldkrest.group**, or (recommended) verify `goldkrest.group` under **Domains** in Resend and
-> set the optional `RESEND_FROM_EMAIL` variable, e.g. `Goldkrest Group <website@goldkrest.group>`.
+   | Name                | Value                                            |
+   | ------------------- | ------------------------------------------------ |
+   | `RESEND_API_KEY`    | the key from step 4                              |
+   | `RESEND_FROM_EMAIL` | `Goldkrest Group Website <website@goldkrest.group>` |
 
-If `RESEND_API_KEY` is missing, the form shows a friendly error and logs a message on the server.
+   Then **redeploy** (Deployments → ⋯ → Redeploy). Environment variables only apply to new deployments.
+6. **Test it.** Fill in the form on the live site. The enquiry should arrive at info@goldkrest.group within a
+   minute. Check spam the first time and mark it "not spam" if needed.
+
+For local development, put the same two variables in `.env.local` (see `.env.example`).
+
+**Shortcut without DNS changes:** sign up to Resend *using info@goldkrest.group* and set only `RESEND_API_KEY`.
+Emails then come from Resend's shared `onboarding@resend.dev` address, which can only deliver to the account
+owner's email, and they're more likely to land in spam. Fine for testing; verify the domain for the real thing.
+
+**If it isn't working:** a missing key makes the form show "temporarily unavailable"; a rejected send shows
+"couldn't be sent". In both cases the reason is logged in Vercel under **Logs**, and Resend's **Emails** page
+lists every send attempt and whether it was delivered.
 
 ## Deploying to Vercel
 
