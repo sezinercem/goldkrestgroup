@@ -4,7 +4,7 @@ import { getService } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Landscaping",
-  description: "Landscaping and garden maintenance: lawns, hedges, patios, planting, turfing and garden maintenance across Essex.",
+  description: "Landscaping across Essex: planting and borders, turfing, patios, paths, driveways and fencing.",
 };
 
 export default function Page() {

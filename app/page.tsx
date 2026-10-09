@@ -117,7 +117,7 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">What we do</p>
             <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Our services</h2>
           </div>
-          <ul className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
+          <ul className="mt-12 grid gap-6 md:grid-cols-3">
             {services.map((service) => (
               <li key={service.slug}>
                 <Link
