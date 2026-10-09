@@ -6,13 +6,14 @@ import brickConcreteBase from "@/public/images/brickwork/concrete-base.jpg";
 import landscapingFenceGateBuild from "@/public/images/landscaping/fence-gate-build.jpg";
 import landscapingFenceGateFrame from "@/public/images/landscaping/fence-gate-frame.jpg";
 import landscapingFrontPath from "@/public/images/landscaping/front-path-gravel-garden.jpg";
-import landscapingDrivewayLawns from "@/public/images/landscaping/gravel-driveway-striped-lawns.jpg";
+import maintenanceDrivewayLawns from "@/public/images/garden-maintenance/gravel-driveway-striped-lawns.jpg";
+import maintenanceLaurelsShaped from "@/public/images/garden-maintenance/laurels-sleeper-bed-shaped.jpg";
 import maintenanceIvyOvergrown from "@/public/images/garden-maintenance/ivy-hedge-overgrown.jpg";
 import maintenanceHedgeBoxTrim from "@/public/images/garden-maintenance/laurel-hedge-box-trim.jpg";
 import maintenanceHedgeDriveway from "@/public/images/garden-maintenance/laurel-hedge-driveway.jpg";
 import maintenanceHedgeTrimmed from "@/public/images/garden-maintenance/laurel-hedge-trimmed.jpg";
 import maintenanceHedgeTrimmedStreet from "@/public/images/garden-maintenance/laurel-hedge-trimmed-street.jpg";
-import landscapingLawnSleeperBed from "@/public/images/landscaping/lawn-curved-sleeper-bed.jpg";
+import maintenanceStripedLawnHouseSide from "@/public/images/garden-maintenance/striped-lawn-house-side.jpg";
 import maintenanceLawnTennisCourt from "@/public/images/garden-maintenance/lawn-tennis-court.jpg";
 import brickRetainingWallsGarden from "@/public/images/brickwork/new-build-dig-out.jpg";
 import landscapingNewBuildDigger from "@/public/images/landscaping/new-build-digger.jpg";
@@ -167,13 +168,11 @@ export const services: Service[] = [
       },
     ],
     gallery: [
-      { src: landscapingDrivewayLawns, alt: "Gravel driveway with steel edging between freshly striped lawns" },
       { src: landscapingBorderPatio, alt: "Planted border with cypress trees beside a striped lawn and patio" },
       { src: landscapingBorderPhotinia, alt: "New border planting with standard photinia trees and cypresses" },
       { src: landscapingBorderCurvedLawn, alt: "Established border planting along a curved lawn and brick piers" },
       { src: landscapingArtificialLawn, alt: "Striped artificial lawn with decking and a garden room" },
       { src: landscapingFrontPath, alt: "Front path and gravel garden with picket fencing" },
-      { src: landscapingLawnSleeperBed, alt: "Lawn beside a curved timber-edged raised border" },
       { src: landscapingTurfGroundPrep, alt: "Large garden levelled and prepared for new turf" },
       { src: landscapingTurfLaying, alt: "New turf being laid over a levelled soil base" },
       { src: landscapingTurfHalfLaid, alt: "Large garden part-way through re-turfing" },
@@ -232,12 +231,15 @@ export const services: Service[] = [
       },
     ],
     gallery: [
+      { src: maintenanceDrivewayLawns, alt: "Freshly striped lawns either side of a gravel driveway" },
       { src: maintenanceStripedLawnFront, alt: "Freshly striped front lawn on a new-build development" },
+      { src: maintenanceStripedLawnHouseSide, alt: "Striped lawn alongside a house and timber border" },
       { src: maintenanceStripedLawnBack, alt: "Striped back garden lawn" },
       { src: maintenanceStripedLawnSleeperBed, alt: "Striped lawn alongside a raised timber border" },
       { src: maintenanceLawnTennisCourt, alt: "Neatly kept lawn and planted bed beside a tennis court" },
       { src: maintenanceHedgeBoxTrim, alt: "Laurel hedge trimmed into a clean, box shape" },
       { src: maintenanceHedgeTrimmedStreet, alt: "Freshly trimmed laurel hedge along a front garden" },
+      { src: maintenanceLaurelsShaped, alt: "Laurels in a raised sleeper bed, trimmed into neat shapes" },
       { src: maintenanceIvyOvergrown, alt: "Overgrown ivy along a yard wall, ready to be cut back" },
       { src: maintenanceVergeStrimming, alt: "Overgrown verge being strimmed back" },
     ],
