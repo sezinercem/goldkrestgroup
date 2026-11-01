@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 import Gallery from "@/components/Gallery";
-import heroPhoto from "@/public/images/brickwork/planted-bed-brick-walls.jpg";
+import heroPhoto from "@/public/images/brickwork/heritage-brick-facade.webp";
 import logoFull from "@/public/logo-full.png";
 import { getService, services, site } from "@/lib/site";
 
 const brickwork = getService("brickwork");
 
 const reasons = [
-  { title: "15 years' experience", text: "Hands-on experience across brickwork, stone and outdoor spaces." },
+  { title: "15 years' experience", text: "Hands-on experience in brickwork, stone restoration and traditional lime pointing." },
   { title: "Heritage expertise", text: "Skills proven on landmark buildings, applied to your home." },
   { title: "A golden standard", text: "Every project, big or small, gets the same care and pride in detail." },
 ];
@@ -22,37 +22,37 @@ export default function Home() {
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-gold-light px-4 py-1.5 text-sm font-semibold text-forest">
               <span className="h-2 w-2 rounded-full bg-gold" aria-hidden="true" />
-              Serving homes and businesses across {site.area}
+              Brickwork & stonework specialists in {site.area}
             </p>
             <h1 className="mt-6 font-display text-4xl leading-[1.1] text-forest sm:text-5xl lg:text-6xl">
-              Heritage craftsmanship, <span className="text-gold">finished to a golden standard.</span>
+              Expert brickwork. <span className="text-gold">Exceptional stonework.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
-              Specialists in brickwork, stone restoration and lime pointing, with reliable landscaping and garden
-              maintenance to keep your home and garden looking their best.
+              Heritage brickwork, stone restoration and traditional lime pointing across Essex.
+              From period façades to garden walls, we bring 15 years of hands-on experience to every project.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contact"
                 className="rounded-full bg-forest px-7 py-3.5 text-center font-semibold text-white transition-colors hover:bg-forest-light"
               >
-                Get in touch
+                Discuss your project
               </Link>
-              <a
-                href="#services"
+              <Link
+                href="/brickwork"
                 className="rounded-full border-2 border-gold px-7 py-3 text-center font-semibold text-forest transition-colors hover:bg-gold-light"
               >
-                Our services
-              </a>
+                Explore brickwork & stonework
+              </Link>
             </div>
           </div>
 
           <div className="relative">
             <div className="absolute -top-4 -right-4 hidden h-full w-full rounded-3xl bg-gold/30 sm:block" aria-hidden="true" />
-            <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-gold-light shadow-xl shadow-forest/10 lg:aspect-4/5">
+            <div className="relative aspect-3/4 overflow-hidden rounded-3xl bg-gold-light shadow-xl shadow-forest/10">
               <Image
                 src={heroPhoto}
-                alt="Brick planter walls with railings around a newly planted bed"
+                alt="Period brick façades with red brick arches, boundary walls and brick piers with iron railings"
                 placeholder="blur"
                 fill
                 priority
@@ -71,15 +71,15 @@ export default function Home() {
               <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">Our specialism</p>
               <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Brickwork &amp; stone restoration</h2>
               <p className="mt-4 text-lg leading-relaxed text-neutral-600">
-                From heritage brickwork and lime pointing to new retaining walls and brick planters, brickwork is at the
-                heart of everything we do.
+                Brickwork and stonework are at the heart of Goldkrest Group. We restore period façades, repair stone,
+                renew lime pointing and build garden and boundary walls with care.
               </p>
             </div>
             <Link
               href={brickwork.href}
               className="shrink-0 self-start rounded-full bg-forest px-7 py-3.5 font-semibold text-white transition-colors hover:bg-forest-light md:self-auto"
             >
-              See our brickwork
+              Explore our specialist work
             </Link>
           </div>
           <div className="mt-10">
@@ -99,8 +99,8 @@ export default function Home() {
             <div className="mt-4 h-1 w-16 rounded-full bg-gold" aria-hidden="true" />
             <p className="mt-6 text-lg leading-relaxed text-neutral-600">
               The Goldkrest Group is built on 15 years of hands-on experience, from restoring delicate stone and
-              heritage brickwork on sites like St Paul&apos;s Cathedral and the Houses of Parliament, to keeping homes
-              and gardens looking their best.
+              heritage brickwork on sites like St Paul&apos;s Cathedral and the Houses of Parliament, to repairing and
+              rebuilding walls for homes across Essex.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-neutral-600">
               We specialise in brickwork, stone restoration and lime pointing, but we also offer reliable landscaping
@@ -115,22 +115,22 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">What we do</p>
-            <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Our services</h2>
+            <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Specialist masonry, with more for your outdoor space</h2>
           </div>
-          <ul className="mt-12 grid gap-6 md:grid-cols-3">
+          <ul className="mt-12 grid gap-6 md:grid-cols-2">
             {services.map((service) => (
-              <li key={service.slug}>
+              <li key={service.slug} className={service.slug === "brickwork" ? "md:col-span-2" : undefined}>
                 <Link
                   href={service.href}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-forest/5 transition-shadow hover:shadow-lg"
                 >
-                  <div className="relative aspect-3/2 overflow-hidden bg-gold-light">
+                  <div className={`relative overflow-hidden bg-gold-light ${service.slug === "brickwork" ? "aspect-3/2 md:aspect-5/2" : "aspect-3/2"}`}>
                     <Image
                       src={(service.cardImage ?? service.heroImage).src}
                       alt={(service.cardImage ?? service.heroImage).alt}
                       style={{ objectPosition: (service.cardImage ?? service.heroImage).position }}
                       fill
-                      sizes="(min-width: 768px) 33vw, 100vw"
+                      sizes={service.slug === "brickwork" ? "(min-width: 1152px) 1088px, 100vw" : "(min-width: 768px) 50vw, 100vw"}
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -168,7 +168,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <CtaBanner />
+      <CtaBanner title="Let’s talk brickwork & stonework" text="Tell us about your restoration, pointing or new brickwork project. We’ll be in touch to discuss the details." />
     </>
   );
 }

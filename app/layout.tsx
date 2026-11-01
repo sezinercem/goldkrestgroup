@@ -25,11 +25,11 @@ const logo = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Goldkrest Group | Brickwork, Stone Restoration & Landscaping in Essex",
+    default: "Goldkrest Group | Brickwork & Stonework Specialists in Essex",
     template: "%s | Goldkrest Group",
   },
   description:
-    "15 years of experience in heritage brickwork, stone restoration and lime pointing, plus landscaping and garden maintenance across Essex.",
+    "Specialists in heritage brickwork, stone restoration and traditional lime pointing across Essex. 15 years of hands-on experience in repairs, restoration and new brickwork.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

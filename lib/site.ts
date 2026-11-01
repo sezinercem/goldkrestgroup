@@ -37,6 +37,8 @@ import landscapingTurfHalfLaid from "@/public/images/landscaping/turf-half-laid.
 import landscapingTurfLaying from "@/public/images/landscaping/turf-laying.jpg";
 import maintenanceVergeStrimming from "@/public/images/garden-maintenance/verge-strimming.jpg";
 
+import brickHeritageFacade from "@/public/images/brickwork/heritage-brick-facade.webp";
+
 export const site = {
   name: "Goldkrest Group",
   email: "info@goldkrest.group",
@@ -49,7 +51,7 @@ export const site = {
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/brickwork", label: "Brickwork" },
+  { href: "/brickwork", label: "Brickwork & Stonework" },
   { href: "/landscaping", label: "Landscaping" },
   { href: "/garden-maintenance", label: "Garden Maintenance" },
   { href: "/contact", label: "Contact Us" },
@@ -94,7 +96,7 @@ export const services: Service[] = [
     summary:
       "Heritage brickwork, stone restoration and lime pointing, backed by 15 years of experience on landmark buildings.",
     heroImage: { src: brickPlanterWalls, alt: "Brick planter walls with railings around a newly planted bed" },
-    cardImage: { src: brickCurvedPlanter, alt: "Curved brick planter wall around a corner bed" },
+    cardImage: { src: brickHeritageFacade, alt: "Period brick façades, red brick arches and boundary walls with iron railings", position: "center 38%" },
     intro: [
       "Brickwork is where Goldkrest Group began. Our team brings 15 years of hands-on experience, including restoring delicate stone and heritage brickwork on sites such as St Paul's Cathedral and the Houses of Parliament.",
       "We bring that same care to homes and properties across Essex. From a period façade that needs sympathetic repair to a new garden wall, every job gets careful attention and pride in detail, finished to a golden standard.",
