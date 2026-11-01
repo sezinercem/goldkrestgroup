@@ -22,10 +22,10 @@ export default function Home() {
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-gold-light px-4 py-1.5 text-sm font-semibold text-forest">
               <span className="h-2 w-2 rounded-full bg-gold" aria-hidden="true" />
-              Brickwork & stonework specialists in {site.area}
+              Brickwork & stonemasonry specialists in {site.area}
             </p>
             <h1 className="mt-6 font-display text-4xl leading-[1.1] text-forest sm:text-5xl lg:text-6xl">
-              Expert brickwork. <span className="text-gold">Exceptional stonework.</span>
+              Expert brickwork. <span className="text-gold">Exceptional stonemasonry.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
               Heritage brickwork, stone restoration and traditional lime pointing across Essex.
@@ -42,7 +42,7 @@ export default function Home() {
                 href="/brickwork"
                 className="rounded-full border-2 border-gold px-7 py-3 text-center font-semibold text-forest transition-colors hover:bg-gold-light"
               >
-                Explore brickwork & stonework
+                Explore brickwork & stonemasonry
               </Link>
             </div>
           </div>
@@ -69,9 +69,9 @@ export default function Home() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">Our specialism</p>
-              <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Brickwork &amp; stone restoration</h2>
+              <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">Brickwork &amp; stonemasonry</h2>
               <p className="mt-4 text-lg leading-relaxed text-neutral-600">
-                Brickwork and stonework are at the heart of Goldkrest Group. We restore period façades, repair stone,
+                Brickwork and stonemasonry are at the heart of Goldkrest Group. We restore period façades, repair stone,
                 renew lime pointing and build garden and boundary walls with care.
               </p>
             </div>
@@ -168,7 +168,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <CtaBanner title="Let’s talk brickwork & stonework" text="Tell us about your restoration, pointing or new brickwork project. We’ll be in touch to discuss the details." />
+      <CtaBanner title="Let’s talk brickwork & stonemasonry" text="Tell us about your restoration, pointing or new brickwork project. We’ll be in touch to discuss the details." />
     </>
   );
 }

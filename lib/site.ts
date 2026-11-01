@@ -51,7 +51,7 @@ export const site = {
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/brickwork", label: "Brickwork & Stonework" },
+  { href: "/brickwork", label: "Brickwork & Stonemasonry" },
   { href: "/landscaping", label: "Landscaping" },
   { href: "/garden-maintenance", label: "Garden Maintenance" },
   { href: "/contact", label: "Contact Us" },
@@ -91,7 +91,7 @@ export const services: Service[] = [
   {
     slug: "brickwork",
     href: "/brickwork",
-    title: "Brickwork & Stone Restoration",
+    title: "Brickwork & Stonemasonry",
     eyebrow: "Our Specialism",
     summary:
       "Heritage brickwork, stone restoration and lime pointing, backed by 15 years of experience on landmark buildings.",
@@ -108,7 +108,7 @@ export const services: Service[] = [
       },
       {
         title: "Stone restoration",
-        text: "Careful cleaning, repair and restoration of delicate and decorative stonework.",
+        text: "Careful cleaning, repair and restoration of delicate and decorative stonemasonry.",
       },
       {
         title: "Lime pointing",

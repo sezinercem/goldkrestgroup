@@ -25,7 +25,7 @@ const logo = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Goldkrest Group | Brickwork & Stonework Specialists in Essex",
+    default: "Goldkrest Group | Brickwork & Stonemasonry Specialists in Essex",
     template: "%s | Goldkrest Group",
   },
   description:

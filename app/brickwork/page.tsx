@@ -13,7 +13,7 @@ const heroImages = [
 ];
 
 export const metadata: Metadata = {
-  title: "Brickwork & Stone Restoration",
+  title: "Brickwork & Stonemasonry",
   description: "Heritage brickwork, stone restoration and lime pointing in Essex, from a team with 15 years of experience on landmark buildings.",
 };
 
