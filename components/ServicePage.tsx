@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site, type Service } from "@/lib/site";
+import { site, type Service, type GalleryImage } from "@/lib/site";
 import BeforeAfter from "./BeforeAfter";
 import CtaBanner from "./CtaBanner";
 import Gallery from "./Gallery";
 import InstagramIcon from "./InstagramIcon";
 
-export default function ServicePage({ service }: { service: Service }) {
+export default function ServicePage({ service, heroImages }: { service: Service; heroImages?: GalleryImage[] }) {
   return (
     <>
-      <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 pt-12 pb-16 sm:px-6 md:pt-16 lg:grid-cols-2 lg:gap-14 lg:px-8">
-        <div>
+      <section className={`mx-auto grid max-w-6xl items-center gap-10 px-4 pt-12 pb-16 sm:px-6 md:pt-16 lg:gap-14 lg:px-8 ${heroImages ? "" : "lg:grid-cols-2"}`}>
+        <div className={heroImages ? "max-w-3xl" : undefined}>
           <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">{service.eyebrow}</p>
           <h1 className="mt-3 font-display text-4xl leading-tight text-forest sm:text-5xl">{service.title}</h1>
           <div className="mt-4 h-1 w-16 rounded-full bg-gold" aria-hidden="true" />
@@ -26,6 +26,19 @@ export default function ServicePage({ service }: { service: Service }) {
             Request a quote
           </Link>
         </div>
+        {heroImages ? (
+          <figure aria-label="Three views of the same brick retaining wall project">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+              {heroImages.map((image) => (
+                <div key={image.alt} className="relative aspect-3/4 overflow-hidden rounded-xl bg-gold-light shadow-lg shadow-forest/10 sm:rounded-2xl">
+                  <Image src={image.src} alt={image.alt} fill priority placeholder="blur"
+                    sizes="(min-width: 1152px) 352px, 33vw" className="object-cover" />
+                </div>
+              ))}
+            </div>
+            <figcaption className="mt-4 text-sm text-neutral-600">One brickwork project, viewed from three angles.</figcaption>
+          </figure>
+        ) : (
         <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-gold-light shadow-xl shadow-forest/10">
           <Image
             src={service.heroImage.src}
@@ -37,6 +50,7 @@ export default function ServicePage({ service }: { service: Service }) {
             className="object-cover"
           />
         </div>
+        )}
       </section>
 
       <section className="bg-gold-light/60 py-16">
