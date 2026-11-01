@@ -28,16 +28,16 @@ export default function ServicePage({ service, heroImages }: { service: Service;
           </Link>
         </div>
         {heroImages ? (
-          <figure className="w-full min-w-0" aria-label="Three views of the same brick retaining wall project">
-            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+          <figure className="w-full min-w-0" aria-label="Two views of the same brick retaining wall project">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {heroImages.map((image) => (
-                <div key={image.alt} className="relative aspect-3/4 overflow-hidden rounded-xl bg-gold-light shadow-lg shadow-forest/10 sm:rounded-2xl">
+                <div key={image.alt} className="relative aspect-2/3 overflow-hidden rounded-xl bg-gold-light shadow-lg shadow-forest/10 sm:rounded-2xl">
                   <Image src={image.src} alt={image.alt} fill priority placeholder="blur"
-                    sizes="(min-width: 1024px) 16vw, 33vw" className="object-cover" />
+                    sizes="(min-width: 1152px) 250px, (min-width: 1024px) 24vw, 50vw" className="object-cover" />
                 </div>
               ))}
             </div>
-            <figcaption className="mt-4 text-sm text-neutral-600">One brickwork project, viewed from three angles.</figcaption>
+            <figcaption className="mt-4 text-sm text-neutral-600">One brickwork project, viewed from two angles.</figcaption>
           </figure>
         ) : (
         <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-gold-light shadow-xl shadow-forest/10">

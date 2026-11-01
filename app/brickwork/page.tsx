@@ -3,12 +3,10 @@ import ServicePage from "@/components/ServicePage";
 import { getService } from "@/lib/site";
 
 import wallAngleOne from "@/public/images/brickwork/retaining-wall-angle-1.webp";
-import wallAngleTwo from "@/public/images/brickwork/retaining-wall-angle-2.webp";
 import wallAngleThree from "@/public/images/brickwork/retaining-wall-angle-3.webp";
 
 const heroImages = [
   { src: wallAngleOne, alt: "Brick retaining wall and coping beside a planted bed, viewed along the white garden building" },
-  { src: wallAngleTwo, alt: "The same brick retaining wall during construction, showing the coping and brickwork from above" },
   { src: wallAngleThree, alt: "The same brick retaining wall viewed along the timber garden building towards the far corner" },
 ];
 
