@@ -1,19 +1,12 @@
-import { Resend } from "resend";
 import { validateContact } from "@/lib/contact";
-import { site } from "@/lib/site";
 
-// Resend's shared test sender works without verifying a domain. Once
-// goldkrest.group is verified in Resend, set RESEND_FROM_EMAIL
-// (e.g. "Goldkrest Group <website@goldkrest.group>") to use your own address.
-const DEFAULT_FROM = "Goldkrest Group Website <onboarding@resend.dev>";
-
-const escapeHtml = (s: string) =>
-  s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+const CONTACT_ENDPOINT = "https://formslist.com/f/DU43J5oY6jiO";
 
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
   try {
     body = await request.json();
+    if (!body || typeof body !== "object" || Array.isArray(body)) throw new Error("Invalid body");
   } catch {
     return Response.json({ error: "Invalid request." }, { status: 400 });
   }
@@ -29,38 +22,23 @@ export async function POST(request: Request) {
     return Response.json({ error: "Please fix the highlighted fields.", errors }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error("RESEND_API_KEY is not set — contact form cannot send email.");
-    return Response.json(
-      { error: "Our contact form is temporarily unavailable." },
-      { status: 500 },
-    );
-  }
-
-  const name = input.name.trim();
-  const email = input.email.trim();
-  const message = input.message.trim();
-
-  const resend = new Resend(apiKey);
-  const { error } = await resend.emails.send({
-    from: process.env.RESEND_FROM_EMAIL || DEFAULT_FROM,
-    to: site.email,
-    replyTo: email,
-    subject: `New website enquiry from ${name.replace(/[\r\n]+/g, " ")}`,
-    text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-    html: `
-      <h2>New website enquiry</h2>
-      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-      <p><strong>Message:</strong></p>
-      <p style="white-space:pre-wrap">${escapeHtml(message)}</p>
-    `,
-  });
-
-  if (error) {
-    console.error("Resend error:", error);
-    return Response.json({ error: "Sorry, your message couldn't be sent." }, { status: 502 });
+  try {
+    const response = await fetch(CONTACT_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      signal: AbortSignal.timeout(12000),
+      body: JSON.stringify({
+        name: input.name.trim(),
+        email: input.email.trim(),
+        message: input.message.trim(),
+        _subject: "New website enquiry — Goldkrest Group",
+      }),
+    });
+    const result = await response.json() as { ok?: boolean };
+    if (!response.ok || result.ok !== true) throw new Error("Submission rejected");
+  } catch {
+    console.error("Contact form submission failed.");
+    return Response.json({ error: "Sorry, your message couldn't be sent. Please try again." }, { status: 502 });
   }
 
   return Response.json({ ok: true });
