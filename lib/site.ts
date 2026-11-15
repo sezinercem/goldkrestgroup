@@ -49,6 +49,11 @@ import brickHeritageDetail from "@/public/images/brickwork/heritage-brick-stone-
 import brickHeritagePointing from "@/public/images/brickwork/heritage-decorative-panel-pointing.webp";
 import brickRetainingEntrance from "@/public/images/brickwork/retaining-wall-garden-entrance.webp";
 import brickRetainingFinished from "@/public/images/brickwork/retaining-wall-white-building-finished.webp";
+import brickFrontGardenPiers from "@/public/images/brickwork/front-garden-wall-and-piers.webp";
+import brickCopingPreparation from "@/public/images/brickwork/retaining-wall-coping-preparation.webp";
+import brickStoneBallPier from "@/public/images/brickwork/yellow-brick-pier-stone-ball.webp";
+import brickPeriodBoundary from "@/public/images/brickwork/period-boundary-wall-and-railings.webp";
+import brickFrontBoundary from "@/public/images/brickwork/front-boundary-wall-brick-coping.webp";
 import brickHeritageFacade from "@/public/images/brickwork/heritage-brick-facade.webp";
 
 export const site = {
@@ -84,6 +89,13 @@ export type BeforeAfterPair = {
   after: GalleryImage;
 };
 
+// Each story contains photographs of one identifiable job, in work-stage order.
+export type ProjectStory = {
+  title: string;
+  text: string;
+  steps: (GalleryImage & { label: string; caption: string })[];
+};
+
 export type Service = {
   slug: string;
   href: string;
@@ -96,6 +108,7 @@ export type Service = {
   intro: string[];
   offerings: { title: string; text: string }[];
   beforeAfter?: BeforeAfterPair[];
+  projectStories?: ProjectStory[];
   gallery: GalleryImage[];
 };
 
@@ -131,18 +144,35 @@ export const services: Service[] = [
         text: "Retaining walls, raised planters, garden and boundary walls, piers and repairs, built neatly and built to last.",
       },
     ],
+    projectStories: [
+      {
+        title: "Retaining wall coping",
+        text: "The same wall beside the timber garden building, from preparation through laying the coping to the finished brickwork.",
+        steps: [
+          { src: brickCopingPreparation, label: "Before coping", caption: "Wall ready for the coping course.", alt: "Retaining wall beside a timber garden building with tools resting on the wall before coping is laid" },
+          { src: brickRetainingCopingProgress, label: "Coping underway", caption: "Bricks laid to a string line and checked for level.", alt: "Retaining wall coping being laid using a string line and spirit level" },
+          { src: brickRetainingProtectedCoping, label: "Mortar curing", caption: "Fresh coping protected with hessian.", alt: "Fresh retaining wall coping protected with hessian beside the white garden building" },
+          { src: brickRetainingEntrance, label: "After", caption: "The finished coping and tidied bed.", alt: "Finished retaining wall coping beside a mulched hedge bed and timber garden building" },
+        ],
+      },
+    ],
     gallery: [
       { src: brickHeritagePanel, alt: "Decorative red-brick relief panel and stone surround viewed from scaffolding during façade restoration" },
       { src: brickHeritagePointing, alt: "Close view of decorative brick relief and surrounding red-brick pointing during restoration" },
       { src: brickHeritageDetail, alt: "Detail of red-brick courses, mortar joints and a stone ledge above a decorative relief panel" },
       { src: brickPlanterWalls, alt: "Brick planter walls with railings around a newly planted bed" },
       { src: brickCurvedPlanter, alt: "Curved brick planter wall around a corner bed" },
+      { src: brickPeriodBoundary, alt: "Yellow-brick boundary wall and piers with iron railings outside a period red-brick house" },
+      { src: brickFrontGardenPiers, alt: "New brick walls and square piers enclosing the front garden of a white house" },
+      { src: brickFrontBoundary, alt: "Front boundary wall with upright brick coping and capped piers outside a white house" },
+      { src: brickStoneBallPier, alt: "Yellow-brick entrance pier topped with a stone cap and ball finial beside front steps" },
       { src: brickYellowBoundaryWall, alt: "Yellow-brick boundary wall with dark coping stones outside a period property" },
       { src: brickYellowGardenWall, alt: "Yellow-brick garden wall with upright brick coping beside a garage" },
       { src: brickRetainingCopingDetail, alt: "Close-up of red-brick retaining wall coping beside timber screening and decking" },
       { src: brickRetainingEntrance, alt: "Finished red-brick retaining wall beside a mulched hedge bed, viewed from the garden entrance" },
       { src: brickRetainingFinished, alt: "Finished brick retaining wall and coping beside a white garden building and narrow decked walkway" },
       { src: brickRetainingProtectedCoping, alt: "Red-brick retaining wall beside a white garden building, with sections of fresh coping protected by hessian" },
+      { src: brickCopingPreparation, alt: "Retaining wall beside a timber garden building with tools on the wall before the coping course is laid" },
       { src: brickRetainingCopingProgress, alt: "Red-brick retaining wall coping being laid using a string line and spirit level beside a timber garden building" },
       { src: brickRetainingWallsGroundworks, alt: "Stepped brick retaining walls with fencing above, during groundworks" },
       { src: brickRetainingWallsGarden, alt: "Brick retaining walls around a new-build garden, ready for landscaping" },
@@ -183,12 +213,25 @@ export const services: Service[] = [
         text: "New fences and gates built to give your garden privacy, security and a tidy boundary.",
       },
     ],
-    beforeAfter: [
+    projectStories: [
       {
-        title: "New patio",
-        text: "Ground dug out beside the house, then a sub-base and new stone-effect patio laid around the heat pump.",
-        before: { src: landscapingPatioBefore, alt: "Ground dug out beside a new-build house, ready for a patio" },
-        after: { src: landscapingPatioAfter, alt: "The same area with a new stone-effect patio laid" },
+        title: "New patio, from the ground up",
+        text: "One garden, from the initial dig-out to a prepared base, paving in progress and the finished patio beside the house.",
+        steps: [
+          { src: landscapingPatioBefore, label: "Before", caption: "The area dug out, ready for the new patio.", alt: "Ground dug out beside the house and heat pump before the patio is laid" },
+          { src: landscapingPatioSubBase, label: "Sub-base", caption: "The patio base prepared and slabs ready.", alt: "Prepared patio sub-base beside the same house and heat pump with paving slabs stacked nearby" },
+          { src: landscapingPavingReady, label: "Paving underway", caption: "The first section laid as work continues.", alt: "Patio paving partly laid beside the heat pump with the remaining sub-base exposed" },
+          { src: landscapingPatioAfter, label: "After", caption: "The finished stone-effect patio.", alt: "Finished stone-effect patio beside the same house and heat pump" },
+        ],
+      },
+      {
+        title: "A new lawn taking shape",
+        text: "Progress on the same garden: preparing the soil, laying the first turf and continuing across the plot.",
+        steps: [
+          { src: landscapingTurfGroundPrep, label: "Ground preparation", caption: "The soil prepared ahead of turfing.", alt: "Prepared soil beside a yellow-brick house before turfing" },
+          { src: landscapingTurfLaying, label: "Turf going down", caption: "Fresh turf laid in rows with boards for access.", alt: "Rows of fresh turf being laid in the same fenced garden" },
+          { src: landscapingTurfHalfLaid, label: "Laying continues", caption: "More of the lawn laid, with work still underway.", alt: "The same yellow-brick house and garden with part of the new lawn laid and prepared soil remaining" },
+        ],
       },
     ],
     gallery: [

@@ -5,6 +5,7 @@ import BeforeAfter from "./BeforeAfter";
 import CtaBanner from "./CtaBanner";
 import Gallery from "./Gallery";
 import InstagramIcon from "./InstagramIcon";
+import ProjectStories from "./ProjectStories";
 
 export default function ServicePage({ service, heroImages }: { service: Service; heroImages?: GalleryImage[] }) {
   return (
@@ -67,6 +68,17 @@ export default function ServicePage({ service, heroImages }: { service: Service;
           </ul>
         </div>
       </section>
+
+      {service.projectStories && service.projectStories.length > 0 && (
+        <section className="bg-gold-light/30 py-16">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <p className="text-sm font-semibold uppercase tracking-widest text-gold-dark">Step by step</p>
+            <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">See the work take shape</h2>
+            <p className="mt-3 text-neutral-600">Follow each job through its photographed stages. Tap a photo to open the sequence in full.</p>
+            <div className="mt-10"><ProjectStories stories={service.projectStories} /></div>
+          </div>
+        </section>
+      )}
 
       {service.beforeAfter && service.beforeAfter.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 lg:px-8">
