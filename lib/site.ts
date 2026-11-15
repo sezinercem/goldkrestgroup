@@ -9,6 +9,7 @@ import landscapingFrontPath from "@/public/images/landscaping/front-path-gravel-
 import maintenanceDrivewayLawns from "@/public/images/garden-maintenance/gravel-driveway-striped-lawns.jpg";
 import maintenanceLaurelsShaped from "@/public/images/garden-maintenance/laurels-sleeper-bed-shaped.jpg";
 import maintenanceIvyOvergrown from "@/public/images/garden-maintenance/ivy-hedge-overgrown.jpg";
+import maintenanceHedgeWideAngle from "@/public/images/garden-maintenance/laurel-hedge-wide-angle.webp";
 import maintenanceHedgeBoxTrim from "@/public/images/garden-maintenance/laurel-hedge-box-trim.jpg";
 import maintenanceHedgeDriveway from "@/public/images/garden-maintenance/laurel-hedge-driveway.jpg";
 import maintenanceHedgeTrimmed from "@/public/images/garden-maintenance/laurel-hedge-trimmed.jpg";
@@ -252,6 +253,7 @@ export const services: Service[] = [
       { src: maintenanceLawnTennisCourt, alt: "Neatly kept lawn and planted bed beside a tennis court" },
       { src: maintenanceHedgeBoxTrim, alt: "Laurel hedge trimmed into a clean, box shape" },
       { src: maintenanceHedgeTrimmedStreet, alt: "Freshly trimmed laurel hedge along a front garden" },
+      { src: maintenanceHedgeWideAngle, alt: "Wide view of a neatly trimmed laurel hedge with exposed stems beside a gravel driveway and raised timber bed" },
       { src: maintenanceLaurelsShaped, alt: "Laurels in a raised sleeper bed, trimmed into neat shapes" },
       { src: maintenanceIvyOvergrown, alt: "Overgrown ivy along a yard wall, ready to be cut back" },
       { src: maintenanceVergeStrimming, alt: "Overgrown verge being strimmed back" },
