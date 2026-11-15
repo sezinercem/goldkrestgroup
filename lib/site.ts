@@ -37,6 +37,12 @@ import landscapingTurfHalfLaid from "@/public/images/landscaping/turf-half-laid.
 import landscapingTurfLaying from "@/public/images/landscaping/turf-laying.jpg";
 import maintenanceVergeStrimming from "@/public/images/garden-maintenance/verge-strimming.jpg";
 
+import brickYellowBoundaryWall from "@/public/images/brickwork/yellow-brick-boundary-wall.webp";
+import brickYellowGardenWall from "@/public/images/brickwork/yellow-brick-garden-wall.webp";
+import brickRetainingCopingDetail from "@/public/images/brickwork/retaining-wall-coping-detail.webp";
+import brickRetainingProtectedCoping from "@/public/images/brickwork/retaining-wall-protected-coping.webp";
+import brickRetainingCopingProgress from "@/public/images/brickwork/retaining-wall-coping-in-progress.webp";
+
 import brickHeritageFacade from "@/public/images/brickwork/heritage-brick-facade.webp";
 
 export const site = {
@@ -122,6 +128,11 @@ export const services: Service[] = [
     gallery: [
       { src: brickPlanterWalls, alt: "Brick planter walls with railings around a newly planted bed" },
       { src: brickCurvedPlanter, alt: "Curved brick planter wall around a corner bed" },
+      { src: brickYellowBoundaryWall, alt: "Yellow-brick boundary wall with dark coping stones outside a period property" },
+      { src: brickYellowGardenWall, alt: "Yellow-brick garden wall with upright brick coping beside a garage" },
+      { src: brickRetainingCopingDetail, alt: "Close-up of red-brick retaining wall coping beside timber screening and decking" },
+      { src: brickRetainingProtectedCoping, alt: "Red-brick retaining wall beside a white garden building, with sections of fresh coping protected by hessian" },
+      { src: brickRetainingCopingProgress, alt: "Red-brick retaining wall coping being laid using a string line and spirit level beside a timber garden building" },
       { src: brickRetainingWallsGroundworks, alt: "Stepped brick retaining walls with fencing above, during groundworks" },
       { src: brickRetainingWallsGarden, alt: "Brick retaining walls around a new-build garden, ready for landscaping" },
       { src: brickRetainingWallSleeperBed, alt: "Brick retaining wall with an oak sleeper bed along its base" },
