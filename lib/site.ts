@@ -44,6 +44,11 @@ import brickRetainingCopingDetail from "@/public/images/brickwork/retaining-wall
 import brickRetainingProtectedCoping from "@/public/images/brickwork/retaining-wall-protected-coping.webp";
 import brickRetainingCopingProgress from "@/public/images/brickwork/retaining-wall-coping-in-progress.webp";
 
+import brickHeritagePanel from "@/public/images/brickwork/heritage-decorative-panel-scaffolding.webp";
+import brickHeritageDetail from "@/public/images/brickwork/heritage-brick-stone-detail.webp";
+import brickHeritagePointing from "@/public/images/brickwork/heritage-decorative-panel-pointing.webp";
+import brickRetainingEntrance from "@/public/images/brickwork/retaining-wall-garden-entrance.webp";
+import brickRetainingFinished from "@/public/images/brickwork/retaining-wall-white-building-finished.webp";
 import brickHeritageFacade from "@/public/images/brickwork/heritage-brick-facade.webp";
 
 export const site = {
@@ -127,11 +132,16 @@ export const services: Service[] = [
       },
     ],
     gallery: [
+      { src: brickHeritagePanel, alt: "Decorative red-brick relief panel and stone surround viewed from scaffolding during façade restoration" },
+      { src: brickHeritagePointing, alt: "Close view of decorative brick relief and surrounding red-brick pointing during restoration" },
+      { src: brickHeritageDetail, alt: "Detail of red-brick courses, mortar joints and a stone ledge above a decorative relief panel" },
       { src: brickPlanterWalls, alt: "Brick planter walls with railings around a newly planted bed" },
       { src: brickCurvedPlanter, alt: "Curved brick planter wall around a corner bed" },
       { src: brickYellowBoundaryWall, alt: "Yellow-brick boundary wall with dark coping stones outside a period property" },
       { src: brickYellowGardenWall, alt: "Yellow-brick garden wall with upright brick coping beside a garage" },
       { src: brickRetainingCopingDetail, alt: "Close-up of red-brick retaining wall coping beside timber screening and decking" },
+      { src: brickRetainingEntrance, alt: "Finished red-brick retaining wall beside a mulched hedge bed, viewed from the garden entrance" },
+      { src: brickRetainingFinished, alt: "Finished brick retaining wall and coping beside a white garden building and narrow decked walkway" },
       { src: brickRetainingProtectedCoping, alt: "Red-brick retaining wall beside a white garden building, with sections of fresh coping protected by hessian" },
       { src: brickRetainingCopingProgress, alt: "Red-brick retaining wall coping being laid using a string line and spirit level beside a timber garden building" },
       { src: brickRetainingWallsGroundworks, alt: "Stepped brick retaining walls with fencing above, during groundworks" },
